@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/anysure/anysure.packages/tree/master.svg?style=svg)](https://circleci.com/gh/anysure/anysure.packages/tree/master)
 # Packages
 
 Configures the repository's, settings and runs updates for Debian and RHEL systems.
