@@ -22,6 +22,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: update
+          command: |
+            yum update -y
+      - run:
           name: Create symlink to role
           command: |
             mkdir -p "${HOME}/.ansible/roles" && \
@@ -45,6 +49,11 @@ jobs:
     resource_class: small
     steps:
       - checkout
+      - run:
+          name: update
+          command: |
+            apt update
+            apt full-upgrade -y
       - run:
           name: Ensure python3-venv is installed
           command: |
