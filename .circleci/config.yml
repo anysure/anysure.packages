@@ -30,9 +30,9 @@ jobs:
           command: |
             mkdir -p "${HOME}/.ansible/roles" && \
             ln -s "${HOME}/project" "${HOME}/.ansible/roles/anysure.packages"
-#      - run:
-#          name: Create Python3 virtual environment
-#          command: python3 -m venv venv
+      - run:
+          name: Create Python3 virtual environment
+          command: python3 -m venv venv
       - run:
           name: Test role with molecule
           command: |
@@ -63,9 +63,9 @@ jobs:
           command: |
             mkdir -p "${HOME}/.ansible/roles" && \
             ln -s "${HOME}/project" "${HOME}/.ansible/roles/anysure.packages"
-#      - run:
-#          name: Create Python3 virtual environment
-#          command: python3 -m venv venv
+      - run:
+          name: Create Python3 virtual environment
+          command: python3 -m venv venv
       - run:
           name: Test role with molecule
           command: |
