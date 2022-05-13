@@ -1,2 +1,48 @@
 ---
 # defaults file for packages
+
+packages:
+  - name: qemu-guest-agent
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: acpid
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: bind-utils
+    apt_ignore: yes
+  - name: binutils
+  - name: curl
+  - name: git
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: iotop
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: ipset
+  - name: lsof
+  - name: nano
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: net-tools
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: nmap
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: pciutils
+  - name: rsync
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: tcpdump
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: unzip
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: uuid
+    dnf_ignore: yes
+    yum_ignore: yes
+  - name: vim-enhanced
+    apt_ignore: yes
+  - name: wget
+
