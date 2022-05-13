@@ -40,37 +40,16 @@ jobs:
             molecule --version && \
             molecule test 
 
-  build_centos8:
-    docker:
-      - image: geerlingguy/docker-centos8-ansible
-    resource_class: small
-    steps:
-      - checkout
-      - run:
-          name: Create symlink to role
-          command: |
-            mkdir -p "${HOME}/.ansible/roles" && \
-            ln -s "${HOME}/project" "${HOME}/.ansible/roles/anysure.packages"
-      - run:
-          name: Create Python3 virtual environment
-          command: python3 -m venv venv
-      - run:
-          name: Test role with molecule
-          command: |
-            . venv/bin/activate && \
-            pip install --upgrade pip && \
-            pip install wheel==0.34.2 && \
-            pip install -r molecule/requirements.txt && \
-            ansible --version && \
-            molecule --version && \
-            molecule test
-
   build_debian11:
     docker:
       - image: geerlingguy/docker-debian11-ansible
     resource_class: small
     steps:
       - checkout
+      - run:
+          name: Ensure python3-venv is installed
+          command: |
+            apt-get install python3-venv
       - run:
           name: Create symlink to role
           command: |
