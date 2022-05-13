@@ -17,7 +17,7 @@ jobs:
 
   build_rockylinux8:
     docker:
-      - image: geerlingguy/docker-rockylinux8-ansible
+      - image: rockylinux:latest
     resource_class: small
     steps:
       - checkout
@@ -42,7 +42,7 @@ jobs:
 
   build_debian11:
     docker:
-      - image: geerlingguy/docker-debian11-ansible
+      - image: debian:stable
     resource_class: small
     steps:
       - checkout
@@ -77,7 +77,6 @@ workflows:
   on-commit:
     jobs:
       - build_rockylinux8
-      - build_centos8
       - build_debian11
   weekly-schedule:
     triggers:
@@ -89,5 +88,4 @@ workflows:
                 - master
     jobs:
       - build_rockylinux8
-      - build_centos8
       - build_debian11
