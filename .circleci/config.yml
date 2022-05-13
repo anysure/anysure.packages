@@ -17,7 +17,7 @@ jobs:
 
   build_rockylinux8:
     docker:
-      - image: rockylinux:latest
+      - image: geerlingguy/docker-rockylinux8-ansible:latest
     resource_class: small
     steps:
       - checkout
@@ -42,7 +42,7 @@ jobs:
 
   build_debian11:
     docker:
-      - image: debian:stable
+      - image: geerlingguy/docker-debian11-ansible:latest
     resource_class: small
     steps:
       - checkout
