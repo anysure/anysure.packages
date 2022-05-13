@@ -32,9 +32,8 @@ jobs:
       - run:
           name: Test role with molecule
           command: |
-            . venv/bin/activate && \
             pip install --upgrade pip && \
-            pip install wheel==0.34.2 && \
+            pip install wheel && \
             pip install -r molecule/requirements.txt && \
             ansible --version && \
             molecule --version && \
@@ -61,9 +60,8 @@ jobs:
       - run:
           name: Test role with molecule
           command: |
-            . venv/bin/activate && \
             pip install --upgrade pip && \
-            pip install wheel==0.34.2 && \
+            pip install wheel && \
             pip install -r molecule/requirements.txt && \
             ansible --version && \
             molecule --version && \
